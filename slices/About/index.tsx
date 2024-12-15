@@ -9,7 +9,7 @@ export type AboutProps = SliceComponentProps<Content.AboutSlice>;
 /**
  * Component for "About" Slices.
  */
-const About = ({ slice }: AboutProps): JSX.Element => {
+const About = ({ slice }: AboutProps) => {
   return (
     <section
       data-slice-type={slice.slice_type}
