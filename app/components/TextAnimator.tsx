@@ -11,7 +11,6 @@ interface TextAnimatorProps {
 
 export function TextAnimator({ children }: TextAnimatorProps): React.ReactElement {
     const textRef = useRef<HTMLSpanElement>(null);
-    const originalText = useRef<React.ReactNode>(children);
 
     useEffect(() => {
         const element = textRef.current;
