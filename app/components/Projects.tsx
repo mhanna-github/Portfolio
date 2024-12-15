@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import clsx from "clsx";
+import Image from "next/image";
 
 export function Projects({ projects }: { projects: Array<{ title: string, name: string, image: string, frameworks: string, about: string, link: string}> }) {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -46,7 +47,7 @@ export function Projects({ projects }: { projects: Array<{ title: string, name: 
                     )}
                 >
                     <figure className="w-full h-full aspect-square" >
-                        <img src={project.image} alt="" className="w-full h-full object-cover" />
+                        <Image src={project.image} alt="" className="w-full h-full object-cover" />
                         <div className="absolute inset-0 bg-black/50"></div>
                     </figure>
                     <div className="absolute w-[95%] h-[85%] inset-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[999] flex flex-col justify-between uppercase">

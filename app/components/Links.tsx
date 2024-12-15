@@ -1,5 +1,4 @@
 interface LinksProps {
-    title: any;
     links: Array<{title: string, link: string, name: string}>;
 }
 

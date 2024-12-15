@@ -1,4 +1,4 @@
-export function Hero({title, location, hero_position_1, hero_position_2}: {title: any, location: any, hero_position_1: any, hero_position_2: any}) {
+export function Hero({title, location, hero_position_1, hero_position_2}: {title: string, location: string, hero_position_1: string, hero_position_2: string}) {
     return (
           <section className='flex flex-col justify-between leading-tight'>
                     <div className='text-left relative after:content-[""] after:absolute after:-bottom-[125%] after:left-0 after:w-full after:h-[1px] after:bg-white'>
