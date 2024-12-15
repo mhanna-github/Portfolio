@@ -26,21 +26,23 @@ export default async function Home() {
 
   
   return (
-    <main className='min-h-[100dvh] w-full overflow-x-hidden overflow-overlay z-[999] position relative flex justify-center items-center font-space-mono'>
-      <div className='flex flex-col w-[528px] px-4 py-10'>
-        <Hero 
-            title={page.data.hero_title}
-            location={page.data.hero_location}
-            hero_position_1={page.data.hero_position_1}
-            hero_position_2={page.data.hero_position_2}
-        />
-        <About title={page.data.about_title} text={page.data.about_text} />
-        <Projects projects={projects} />
-        <Links 
-            title={page.data.links_title} 
-            links={links} 
-        />
-      </div>
-    </main>
+    <>
+      <main className='min-h-[100dvh] w-full overflow-x-hidden overflow-overlay z-[999] position relative flex justify-center items-center font-space-mono'>
+        <div className='flex flex-col w-[528px] px-4 py-8'>
+          <Hero 
+              title={page.data.hero_title}
+              location={page.data.hero_location}
+              hero_position_1={page.data.hero_position_1}
+              hero_position_2={page.data.hero_position_2}
+          />
+          <About title={page.data.about_title} text={page.data.about_text} />
+          <Projects projects={projects} />
+          <Links 
+              title={page.data.links_title} 
+              links={links} 
+          />
+        </div>
+      </main>
+    </>
   );
 }

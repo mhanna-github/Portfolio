@@ -3,6 +3,7 @@
 import { useState } from "react";
 import clsx from "clsx";
 import Image from "next/image";
+import { TextAnimator } from './TextAnimator';
 
 interface Project {
     title: string;
@@ -37,10 +38,10 @@ export function Projects({ projects }: { projects: Project[] }) {
                 </li>
                 {projects.map((project, index) => (
                     <li key={`project-${index}`} className='border-b border-white'>
-                        <button className='flex flex-row justify-between py-[12px] w-full' onClick={() => {
-                            handleClick(index);
-                        }}>
-                            <h3 className='text-h3 font-bold uppercase'>{project.name}</h3>
+                        <button className='flex flex-row justify-between py-[12px] w-full hover:text-black hover:bg-white transition-colors duration-300' onClick={() => handleClick(index)}>
+                            <h3 className='text-h3 font-bold uppercase'>
+                                <TextAnimator>{project.name}</TextAnimator>
+                            </h3>
                             <small className='text-h3 font-thin'>+</small>
                         </button>
                     </li>
@@ -66,7 +67,7 @@ export function Projects({ projects }: { projects: Project[] }) {
                     </figure>
                     <div className="absolute w-[95%] h-[85%] inset-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[999] flex flex-col justify-between uppercase">
                         <div className="flex flex-col gap-[30px]">
-                            <h2 className="text-h1 font-bold uppercase inline-block text-black bg-white w-fit"> [{project.name}]</h2>
+                            <h2 className="text-h1 font-bold uppercase inline-block text-black bg-white w-fit">[<TextAnimator>{project.name}</TextAnimator>]</h2>
                             <div>
                                 <h2 className="text-h1 italic font-thin"><span className="italic font-bold">Frame</span>works</h2>
                                 <p className="text-body">{project.frameworks}</p>
@@ -76,11 +77,21 @@ export function Projects({ projects }: { projects: Project[] }) {
                                 <p className="text-body max-w-[500px] text-justify">{project.about}</p>
                             </div>
                         </div>
-                        <a href={project.link} className="text-body font-thin underline cursor-pointer flex flex-row gap-[5px] items-center">
-                            <h3 className="text-h3 font-bold">See the website</h3>
-                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M2.52941 1L10.8824 1.11765M10.8824 1.11765L11 9.47059M10.8824 1.11765L1 11" 
-                                    stroke="#E0E0E0" 
+                        <a href={project.link} className="group flex flex-row gap-[5px] items-center w-fit hover:text-black hover:bg-white transition-colors duration-300 relative after:absolute after:bottom-[0.5] after:left-0 after:w-full after:h-[1px] after:bg-current">
+                            <h3 className="text-h3 font-bold ">
+                                <TextAnimator>See the website</TextAnimator>
+                            </h3>
+                            <svg 
+                                width="12" 
+                                height="12" 
+                                viewBox="0 0 12 12" 
+                                fill="none" 
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="transition-colors duration-10"
+                            >
+                                <path 
+                                    d="M2.52941 1L10.8824 1.11765M10.8824 1.11765L11 9.47059M10.8824 1.11765L1 11" 
+                                    stroke="currentColor" 
                                     strokeLinecap="round" 
                                     strokeLinejoin="round"
                                 />
@@ -89,14 +100,14 @@ export function Projects({ projects }: { projects: Project[] }) {
                     </div>
                     <button 
                         className={clsx(
-                            "fixed top-5 right-6 lg:top-8 lg:right-10 underline z-[999] hover:text-black transition-colors duration-300"
+                            "fixed top-5 right-6 lg:top-8 lg:right-10 underline z-[999] hover:text-black hover:bg-white transition-colors duration-300"
                         )} 
                         onClick={() => {
                             handleClose();
                         }}
                         aria-label="Close modal"
                     >
-                        CLOSE
+                        <TextAnimator>CLOSE</TextAnimator>
                     </button>
                 </div>
             ))}
