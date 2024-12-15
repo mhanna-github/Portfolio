@@ -1,0 +1,31 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Divide"
+						}
+					}
+				]
+			},
+			"text": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Consequat quis labore magna incididunt id velit enim ipsum consectetur ad consequat qui labore ea mollit. Mollit do nisi duis quis ad non excepteur magna nisi quis aute. Proident deserunt incididunt in aute fugiat minim enim ut non velit."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

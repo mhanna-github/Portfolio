@@ -1,31 +1,11 @@
-const links = [
-    {
-        name: 'LinkedIn',
-        link: 'https://www.linkedin.com/in/hanna-mandzyuk/'
-    },
-    {
-        name: 'Github',
-        link: 'https://www.linkedin.com/in/hanna-mandzyuk/'
-    },
-    {
-        name: 'CV',
-        link: 'https://www.linkedin.com/in/hanna-mandzyuk/'
-    },
-    {
-        name: 'Email',
-        link: 'https://www.linkedin.com/in/hanna-mandzyuk/'
-    },
-    {
-        name: 'Pinterest',
-        link: 'https://www.linkedin.com/in/hanna-mandzyuk/'
-    },
+interface LinksProps {
+    title: any;
+    links: Array<{title: string, link: string, name: string}>;
+}
 
-]
-
-export function Links() {
+export function Links({ links }: LinksProps) {
     return (
-        <>
-            <div className="mt-[40px] flex flex-col gap-[13px]">
+            <section className="mt-[40px] flex flex-col gap-[13px]">
                 <h2 className='text-h2 font-bold uppercase'>Links</h2>
                 <ul className='flex flex-row flex-wrap justify-between text-justify'>
                     {
@@ -45,7 +25,6 @@ export function Links() {
                         ))
                     }
                 </ul>
-            </div>
-        </>
+            </section>
     )
 }
