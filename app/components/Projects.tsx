@@ -57,8 +57,9 @@ export function Projects({ projects }: { projects: Project[] }) {
                 >
                     <figure className="w-full h-full aspect-square" >
                         <Image 
-                            src={project.image || '/default-image.png'} 
+                            src={project.image || '/default-image.jpg'} 
                             alt="" 
+                            fill
                             className="w-full h-full object-cover" 
                         />
                         <div className="absolute inset-0 bg-black/50"></div>
