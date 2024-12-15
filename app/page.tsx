@@ -7,6 +7,7 @@ import { Hero } from "./components/Hero";
 export default async function Home() {
   const client = createClient();
   const page = await client.getSingle("homepage");
+  
 
   const projects = page.data.projects.map(project => ({
     title: project.title || "Projects",
@@ -26,7 +27,12 @@ export default async function Home() {
   return (
     <main className='min-h-[100dvh] w-full overflow-x-hidden pointer-events-all overflow-overlay z-[999] position relative flex justify-center items-center font-space-mono bg-black bg-opacity-25 text-white'>
       <div className='flex flex-col w-[528px] px-4 py-10'>
-        <Hero title={page.data.hero_title} location={page.data.hero_location} hero_position_1={page.data.hero_position_1} hero_position_2={page.data.hero_position_2} />
+        <Hero 
+            title={page.data.hero_title}
+            location={page.data.hero_location}
+            hero_position_1={page.data.hero_position_1}
+            hero_position_2={page.data.hero_position_2}
+        />
         <About title={page.data.about_title} text={page.data.about_text} />
         <Projects projects={projects} />
         <Links title={page.data.links_title} links={links} />
