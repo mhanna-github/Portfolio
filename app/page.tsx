@@ -26,7 +26,7 @@ export default async function Home() {
 
   
   return (
-    <main className='min-h-[100dvh] w-full overflow-x-hidden pointer-events-all overflow-overlay z-[999] position relative flex justify-center items-center font-space-mono bg-black bg-opacity-25 text-white'>
+    <main className='min-h-[100dvh] w-full overflow-x-hidden overflow-overlay z-[999] position relative flex justify-center items-center font-space-mono'>
       <div className='flex flex-col w-[528px] px-4 py-10'>
         <Hero 
             title={page.data.hero_title}
