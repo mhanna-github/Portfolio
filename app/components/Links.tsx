@@ -16,7 +16,7 @@ export function Links({ links }: LinksProps) {
                     {
                         links.map((link) => (
                             <li key={link.name ?? ''} className='flex flex-row justify-between items-center'>
-                                <a href={link.link ?? '#'} className='group flex flex-row justify-end gap-[3px] items-center hover:text-black hover:bg-white transition-colors duration-300 relative after:absolute after:bottom-[0.5] after:left-0 after:w-full after:h-[1px] after:bg-current'>
+                                <a href={link.link ?? '#'} className='group flex flex-row justify-end gap-[3px] items-center hover:text-black hover:bg-white transition-colors duration-300 relative after:absolute after:bottom-1 after:left-0 after:w-full after:h-[1px] after:bg-current'>
                                     <h3 className='text-h4 font-thin uppercase'>
                                         <TextAnimator>{link.name ?? ''}</TextAnimator>
                                     </h3>
