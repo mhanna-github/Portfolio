@@ -77,7 +77,7 @@ export function Projects({ projects }: { projects: Project[] }) {
                                 <p className="text-body max-w-[500px] text-justify">{project.about}</p>
                             </div>
                         </div>
-                        <a href={project.link} className="group flex flex-row gap-[5px] items-center w-fit hover:text-black hover:bg-white transition-colors duration-300 relative after:absolute after:bottom-[0.5] after:left-0 after:w-full after:h-[1px] after:bg-current">
+                        <a href={project.link} className="group flex flex-row gap-[5px] items-center w-fit hover:text-black hover:bg-white transition-colors duration-300 relative after:absolute after:bottom-1 after:left-0 after:w-full after:h-[1px] after:bg-current">
                             <h3 className="text-h3 font-bold ">
                                 <TextAnimator>See the website</TextAnimator>
                             </h3>
