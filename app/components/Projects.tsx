@@ -4,7 +4,16 @@ import { useState } from "react";
 import clsx from "clsx";
 import Image from "next/image";
 
-export function Projects({ projects }: { projects: Array<{ title: string, name: string, image: string, frameworks: string, about: string, link: string}> }) {
+interface Project {
+    title: string;
+    name: string;
+    image: string | null;   
+    frameworks: string;
+    about: string;
+    link: string;
+}
+
+export function Projects({ projects }: { projects: Project[] }) {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedProject, setSelectedProject] = useState<number | null>(null);
 

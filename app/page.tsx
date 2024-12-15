@@ -13,10 +13,10 @@ export default async function Home() {
     title: project.title || "Projects",
     link: project.project_link?.text || "#",
     name: project.projects_name || "",
-    image: project.project_image?.url || null,
+    image: project.project_image?.url || "/default-image.jpg",
     frameworks: project.frameworks || "",
     about: project.project_about || ""
-  }));
+}));
 
   const links = page.data.links.map(link => ({
     title: link.link_title || "Links",
@@ -24,6 +24,7 @@ export default async function Home() {
     name: link.link_name || ""
   }));
 
+  
   return (
     <main className='min-h-[100dvh] w-full overflow-x-hidden pointer-events-all overflow-overlay z-[999] position relative flex justify-center items-center font-space-mono bg-black bg-opacity-25 text-white'>
       <div className='flex flex-col w-[528px] px-4 py-10'>
@@ -35,7 +36,10 @@ export default async function Home() {
         />
         <About title={page.data.about_title} text={page.data.about_text} />
         <Projects projects={projects} />
-        <Links title={page.data.links_title} links={links} />
+        <Links 
+            title={page.data.links_title} 
+            links={links} 
+        />
       </div>
     </main>
   );
