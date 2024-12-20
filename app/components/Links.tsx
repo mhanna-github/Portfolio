@@ -41,5 +41,6 @@ export function Links({ links }: LinksProps) {
                     }
                 </ul>
             </section>
+            //will add descript. later
     )
 }

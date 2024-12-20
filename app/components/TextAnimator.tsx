@@ -26,11 +26,14 @@ export function TextAnimator({ children }: TextAnimatorProps): React.ReactElemen
                 const initialHTML = chars[position];
                 
                 gsap.fromTo(char, 
-                    { opacity: 0 },
+                    { opacity: 1 },
                     {
                         duration: 0.03,
+                        onStart: () => {
+                            char.setAttribute('data-original', initialHTML);
+                        },
                         onComplete: () => {
-                            gsap.set(char, { innerHTML: initialHTML, delay: 0.1 });
+                            char.innerHTML = char.getAttribute('data-original') || initialHTML;
                         },
                         repeat: 2,
                         repeatRefresh: true,
