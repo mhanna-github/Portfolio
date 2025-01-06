@@ -69,7 +69,7 @@ export function Projects({ projects }: { projects: Project[] }) {
                         <div className="flex flex-col gap-[30px]">
                             <h2 className="text-h1 font-bold uppercase inline-block text-black bg-white w-fit">[<TextAnimator>{project.name}</TextAnimator>]</h2>
                             <div>
-                                <h2 className="text-h1 italic font-thin"><span className="italic font-bold">Frame</span>works</h2>
+                                <h2 className="text-h1 italic font-thin"><span className="italic font-bold">Techno</span>logies</h2>
                                 <p className="text-body">{project.frameworks}</p>
                             </div>
                             <div>
